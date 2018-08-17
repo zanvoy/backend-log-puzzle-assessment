@@ -26,8 +26,7 @@ http://code.google.com/something/puzzle-animal-baab.jpg
 ```
 
 ## Part B - Download Images Puzzle
----
-
+<hr size=2>
 Complete the `download_images()` function which takes a sorted list of urls and a destination directory. Download the image from each url into the given directory, creating the directory first if necessary (see the "os" module to create a directory, and `urllib.urlretrieve()` for downloading a url). Name the local image files with a simple scheme like "img0", "img1", "img2", and so on. You may wish to print a helpful "Retrieving..." status output line while downloading each image since it can be slow and its nice to have some indication that the program is working. Each image is a little vertical slice from the original. How to put the slices together to re-create the original? It can be solved nicely with a little html (knowledge of HTML is not required).
 
 The `download_images()` function should also create an index.html file in the directory with an <img> tag to show each local image file. The img tags should all be on one line together without separation. In this way, the browser displays all the slices together seamlessly. You do not need knowledge of HTML to do this; just create an index.html file that looks like this:
@@ -50,9 +49,10 @@ img0  img1  img2  img3  img4  img5  img6  img7  img8  img9  index.html
 
 When it's all working, opening the index.html in a browser should reveal the original animal image. What is the animal in the image?
 
-## Part C - Image Slice Descrambling
----------------------------------
+<img src="https://i.ytimg.com/vi/SxvyKqkCXy0/maxresdefault.jpg" width="300" />
 
+## Part C - Image Slice Descrambling
+<hr size=2>
 The second puzzle involves an image of a very famous place, but depends on some custom sorting. For the first puzzle, the urls can be sorted alphabetically to order the images correctly. In the sort, the whole url is used. However, we'll say that if the url ends in the pattern `-_wordchars-wordchars_.jpg`, e.g. `http://example.com/foo/puzzle/bar-abab-baaa.jpg`, then the url should be represented by the **second** word in the sort (e.g. "baaa"). So sorting a list of urls each ending with the word-word.jpg pattern should order the urls by the second word.
 
 Extend your code to order such urls properly, and then you should be able to decode the second place_code.google.com puzzle which shows a famous place. What place does it show?
