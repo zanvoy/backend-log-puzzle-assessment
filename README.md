@@ -57,4 +57,14 @@ The second puzzle involves an image of a very famous place, but depends on some 
 
 Extend your code to order such urls properly, and then you should be able to decode the second place_code.google.com puzzle which shows a famous place. What place does it show?
 
+## Guidance
+- We are looking for readable, maintainable, performant code.  Appropriate comments are expected.
+- Your solution must pass a PEP8 (flake8) check with 0 errors reported.
+- You must use at least one regular expression in your solution somewhere.
+- Your solution must use the 'with' statement (Python context manager).
+- It is *OKAY* to add your own helper functions to achieve a solution!
+- You will need an active internet connection in order to download the images.  
+- If your socket connection times out within urllib, try again.
+
+## Credits
 Creative Commons (CC) Attribution: The images used in this puzzle were made available by their owners under the [Creative Commons Attribution 2.5](http://creativecommons.org/licenses/by/2.5/) license, which generously encourages remixes of the content such as this one. The animal image is from the user zappowbang at flickr and the place image is from the user booleansplit at flickr.
