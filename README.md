@@ -1,5 +1,5 @@
 # Log Puzzle
-==========
+---
 For the Log Puzzle exercise, you'll use Python code to solve two puzzles. This exercise uses the urllib module. Add your code to the `logpuzzle.py` file.
 
 An image of an animal has been broken into many narrow vertical stripe images. The stripe images are on the internet somewhere, each with its own url. The urls are hidden in a web server log file. Your mission is to find the urls and download all image stripes to re-create the original image.
@@ -14,7 +14,7 @@ Here is what a single line from the log file looks like (this really is what apa
 The first few numbers are the address of the requesting browser. The most interesting part is the "GET _path_ HTTP" showing the path of a web request received by the server. The path itself never contains spaces, and is separated from the GET and HTTP by spaces (regex suggestion: `\S` (upper case S) matches any non-space char). Find the lines in the log where the string "puzzle" appears inside the path, ignoring the many other lines in the log.
 
 ## Part A - Log File To Urls
--------------------------
+---
 
 Complete the `read_urls(filename)` function that extracts the puzzle urls from inside a logfile. Find all the "puzzle" path urls in the logfile. Combine the path from each url with the server name from the filename to form a full url, e.g. "http://www.example.com/path/puzzle/from/inside/file". Screen out urls that appear more than once. The `read_urls()` function should return the list of full urls, sorted into alphabetical order and without duplicates. Taking the urls in alphabetical order will yield the image slices in the correct left-to-right order to re-create the original animal image. In the simplest case, main() should just print the urls, one per line.
 
@@ -26,7 +26,7 @@ http://code.google.com/something/puzzle-animal-baab.jpg
 ```
 
 ## Part B - Download Images Puzzle
--------------------------------
+---
 
 Complete the `download_images()` function which takes a sorted list of urls and a destination directory. Download the image from each url into the given directory, creating the directory first if necessary (see the "os" module to create a directory, and "urllib.urlretrieve()" for downloading a url). Name the local image files with a simple scheme like "img0", "img1", "img2", and so on. You may wish to print a helpful "Retrieving..." status output line while downloading each image since it can be slow and its nice to have some indication that the program is working. Each image is a little vertical slice from the original. How to put the slices together to re-create the original? It can be solved nicely with a little html (knowledge of HTML is not required).
 
