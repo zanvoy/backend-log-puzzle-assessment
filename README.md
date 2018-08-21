@@ -57,7 +57,7 @@ Extend your code to order such urls properly, and then you should be able to dec
 - Your solution must pass a PEP8 (flake8) check with 0 errors reported.
 - You must use at least one regular expression in your solution somewhere.
 - Your solution must use the 'with' statement (Python context manager).
-- You must use the `if __name__ == '__main__' Python idiom, and define a main() function.
+- You must use the `if __name__ == '__main__'` Python idiom, and define a main() function.
 - It is *OKAY* to add your own helper functions to achieve a solution!
 - You will need an active internet connection in order to download the images.  
 - If your socket connection times out within urllib, try again.
