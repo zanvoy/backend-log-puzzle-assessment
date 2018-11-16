@@ -15,7 +15,7 @@ The first few numbers are the address of the requesting browser. The most intere
 ## Part A - Log File To Urls
 Complete the `read_urls(filename)` function that extracts the puzzle urls from inside a logfile. Find all the "puzzle" path urls in the logfile. Combine the path from each url with the server name from the filename to form a full url, e.g. `http://www.example.com/path/puzzle/from/inside/file`. Screen out urls that appear more than once. The `read_urls()` function should return the list of full urls, sorted into alphabetical order and without duplicates. Taking the urls in alphabetical order will yield the image slices in the correct left-to-right order to re-create the original animal image. In the simplest case, main() should just print the urls, one per line.
 
-```
+```console
 $ python logpuzzle.py animal_code.google.com
 http://code.google.com/something/puzzle-animal-baaa.jpg
 http://code.google.com/something/puzzle-animal-baab.jpg
@@ -61,6 +61,14 @@ Extend your code to order such urls properly, and then you should be able to dec
 - It is *OKAY* to add your own helper functions to achieve a solution!
 - You will need an active internet connection in order to download the images.  
 - If your socket connection times out within urllib, try again.
+
+## Workflow for this Assignment
+1. Fork this repository into your own personal github account.
+2. Then Clone your own repo to your local development machine.
+3. Create a separate branch named dev/your-github-username, and checkout the branch.
+4. Commit your changes, then git push the branch back to your own github account.
+5. From your own Github repo, create a pull request (PR) from your dev branch back to your own master.
+6. Copy/Paste the URL link to your PR as your assignment submission.
 
 ## Credits
 Creative Commons (CC) Attribution: The images used in this puzzle were made available by their owners under the [Creative Commons Attribution 2.5](http://creativecommons.org/licenses/by/2.5/) license, which generously encourages remixes of the content such as this one. The animal image is from the user zappowbang at flickr and the place image is from the user booleansplit at flickr.
