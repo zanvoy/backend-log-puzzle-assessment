@@ -19,9 +19,11 @@ Here's what a puzzle url looks like:
 import os
 import re
 import sys
-import urllib
 import argparse
+import urllib
 
+def last_eight(item):
+    return item[-8:]
 
 def read_urls(filename):
     """Returns a list of the puzzle urls from the given log file,
@@ -29,7 +31,20 @@ def read_urls(filename):
     Screens out duplicate urls and returns the urls sorted into
     increasing order."""
     # +++your code here+++
-    pass
+    url_header = 'http://code.google.com'
+    url_list = []
+    pattern = re.compile(r'\S*puzzle\S*\.jpg')
+    with open(filename) as f:
+        data = f.read()
+    matches = re.findall(pattern,data)
+    for match in matches:
+        url_list.append(url_header+match)
+    set_list = set(url_list)
+    url_list = []
+    for item in set_list:
+        url_list.append(item)   
+    url_list = sorted(url_list, key=last_eight)
+    return url_list
 
 
 def download_images(img_urls, dest_dir):
@@ -40,10 +55,16 @@ def download_images(img_urls, dest_dir):
     with an img tag to show each local image file.
     Creates the directory if necessary.
     """
-    # +++your code here+++
-    pass
-
-
+    if not os.path.exists('./'+dest_dir):
+        os.mkdir(dest_dir)
+    count = 0
+    with open('./'+dest_dir+'/index.html','a') as f:
+        f.write('<html><body>')
+        for url in img_urls:
+            urllib.urlretrieve(url, './'+dest_dir+'/img'+str(count))
+            f.write('<img src="img'+str(count)+'">')
+            count += 1
+        f.write('</html></body>')
 def create_parser():
     """Create an argument parser object"""
     parser = argparse.ArgumentParser()
